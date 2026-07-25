@@ -35,21 +35,19 @@ API) est en stdlib Python.
 
 - **Châssis :** Fiat Ducato / Citroën Jumper / Peugeot Boxer (même plateforme Sevel),
   Ford Transit, Renault Master / Opel Movano / Nissan NV400 (même plateforme X62/X70),
-  Mercedes-Benz Sprinter. Liste officielle dans `_CHASSIS_PATTERNS`
-  (`parser/ad_text_parser.py`), affichée automatiquement sur la page et en CLI — pas
-  besoin d'éditer ce README pour la synchroniser côté code, seulement pour que la doc
-  reste lisible.
+  Mercedes-Benz Sprinter, Volkswagen Transporter (T5/T6/T6.1, y compris California),
+  Volkswagen Crafter (y compris Grand California), Iveco Daily. Liste officielle dans
+  `_CHASSIS_PATTERNS` (`parser/ad_text_parser.py`), affichée automatiquement sur la page
+  et en CLI — pas besoin d'éditer ce README pour la synchroniser côté code, seulement
+  pour que la doc reste lisible.
 - **Cellules (réputation étanchéité) :** CI, Rapido, Hymer, Carthago, Frankia, Knaus,
   Dethleffs, Bürstner, Pilote, Chausson, Challenger, Adria, Laika, Benimar, Etrusco.
 - Châssis hors liste : aucun rapport généré (pas de contenu inventé pour un véhicule hors
   scope). Cellule hors liste : dossier partiel (mécanique châssis uniquement, pas de
   réputation étanchéité).
-- **Châssis identifiés mais volontairement hors périmètre pour l'instant** (reconnus dans
-  le texte pour un message "hors périmètre" plus utile, mais sans base de connaissance
-  réelle) : Iveco Daily, Volkswagen Crafter, Volkswagen Transporter T5/T6/T6.1. Un
-  élargissement à ces marques est planifié mais demande une vraie recherche automobile
-  par marque (pannes connues, coûts d'entretien, texte de rappel) avant d'être ajouté —
-  pas de données inventées.
+- Tous les châssis identifiés dans le plan initial sont désormais couverts. Un
+  élargissement futur à d'autres marques suivrait la même méthode (vraie recherche
+  automobile par marque avant tout ajout — pas de données inventées).
 
 ## Fonctionnalités
 

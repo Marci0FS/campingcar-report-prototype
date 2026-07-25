@@ -1,0 +1,75 @@
+{
+  "chassis": "Iveco Daily",
+  "_meta": {
+    "note": "Base curée à la main pour un prototype, à partir d'une recherche rapide (articles de blog/SEO indépendants convergents, forums propriétaires). Contrairement aux autres châssis de ce comparatif (dérivés de fourgonnettes), le Daily est construit comme un poids lourd allégé (châssis porteur séparé de la caisse sur les versions lourdes, suspensions renforcées) : c'est le châssis de référence pour les camping-cars intégraux les plus lourds de ce comparatif. Couvre la génération IV (2006-2011/2014 selon motorisation, moteurs F1A 2.3 / F1C 3.0) et la génération Euro 6 / HI-SCR (2014+, sans EGR sur la technologie HI-SCR propre à Iveco). Points marqués 'confidence: anecdotal' rapportés par des propriétaires/professionnels ou des articles indépendants sans source officielle vérifiée. Points marqués 'confidence: documented' s'appuient sur des sources publiques identifiables. Aucun rappel officiel spécifique et significatif n'a été identifié dans la recherche rapide effectuée pour ce prototype (contrairement au Sprinter, Transporter ou Crafter où plusieurs fiches rappel.conso.gouv.fr ont été trouvées) — cela ne signifie pas l'absence de rappel, seulement l'absence de signal trouvé.",
+    "last_reviewed": "2026-07-25"
+  },
+  "engines": [
+    {
+      "name": "2.3 HPI (F1A, génération IV, jusqu'à ~2011, diesel)",
+      "fuel": "Diesel",
+      "year_range": [2006, 2011],
+      "known_issues": [
+        {
+          "description": "Moteur signalé comme le plus problématique de sa génération : pannes fréquentes d'injecteurs (fuites au niveau des joints/sièges), turbocompresseur fragile, difficultés de démarrage à froid, pertes de puissance intermittentes avec passage en mode dégradé.",
+          "confidence": "anecdotal"
+        },
+        {
+          "description": "Pannes électroniques affectant les capteurs de position, et encrassement récurrent du filtre à particules.",
+          "confidence": "anecdotal"
+        },
+        {
+          "description": "Courroie de distribution à remplacer tous les 120 000 km ou 5 ans : une usure prématurée non traitée peut détruire le moteur après 150 000 km.",
+          "confidence": "anecdotal"
+        }
+      ]
+    },
+    {
+      "name": "3.0 HPI / HPT (F1C, génération IV, diesel)",
+      "fuel": "Diesel",
+      "year_range": [2006, 2014],
+      "known_issues": [
+        {
+          "description": "Bloc considéré comme nettement plus fiable que le 2.3 HPI de la même génération, en particulier la version 170 ch qui a fait ses preuves même en usage lourd (charge, remorquage). Moins de retours négatifs identifiés dans la recherche rapide effectuée pour ce prototype — à ne pas interpréter comme fiabilité garantie, juste absence de signal fort trouvé.",
+          "confidence": "anecdotal"
+        }
+      ]
+    },
+    {
+      "name": "Euro 6 / HI-SCR (génération VI, 2014+, diesel)",
+      "fuel": "Diesel",
+      "year_range": [2014, 2099],
+      "known_issues": [
+        {
+          "description": "Technologie HI-SCR propre à Iveco : conformité Euro 6 sans vanne EGR sur ces motorisations, ce qui simplifie en théorie l'entretien par rapport aux concurrents qui cumulent EGR + SCR/AdBlue + FAP. Reste dépendant du bon fonctionnement du système SCR/AdBlue et du FAP, qui peuvent tout de même s'encrasser ou tomber en panne comme sur la plupart des diesels récents.",
+          "confidence": "anecdotal"
+        }
+      ]
+    }
+  ],
+  "recall": {
+    "summary": "Ce châssis, comme tout véhicule, peut faire l'objet de campagnes de rappel constructeur ponctuelles selon le millésime et le numéro de série. Aucune campagne majeure et systématique du type Takata n'est établie de façon certaine pour ce prototype.",
+    "confidence": "documented",
+    "important": "Le statut de rappel dépend du numéro de série (VIN) exact du véhicule. Ce prototype ne peut pas certifier qu'une annonce précise est concernée : il doit systématiquement renvoyer l'acheteur vers la vérification officielle avant tout achat.",
+    "official_check_url": "https://www.rappel.conso.gouv.fr/"
+  },
+  "common_defects": [
+    {
+      "description": "Coût des pièces plus élevé et délais d'approvisionnement plus longs que sur les châssis Fiat/Ford/Renault de ce comparatif, en particulier sur les générations plus anciennes — réseau de garages spécialisés moins dense.",
+      "confidence": "anecdotal"
+    },
+    {
+      "description": "Sur les versions poids lourd (caisse posée sur faux châssis articulé) : vérifier l'état des points d'articulation et l'absence de jeu anormal, spécifique à cette conception que les autres châssis de ce comparatif n'ont pas.",
+      "confidence": "anecdotal"
+    }
+  ],
+  "maintenance": {
+    "distribution": "Courroie de distribution à remplacer selon préconisation constructeur, généralement entre 120 000 et 150 000 km ou 5-7 ans selon génération et motorisation — à confirmer via le carnet d'entretien du véhicule précis, ne jamais présumer un intervalle sans vérifier. Ne jamais attendre la rupture : sur un diesel Iveco, une courroie cassée entraîne quasi systématiquement la destruction de la culasse et des soupapes, avec un surcoût de réparation de l'ordre de 1500 € ou plus par rapport à un remplacement préventif.",
+    "revision_cost_eur_indicative": {
+      "vidange_simple": [120, 220],
+      "revision_complete": [350, 700],
+      "distribution": [500, 1300]
+    },
+    "note": "Fourchettes indicatives pour situer un ordre de grandeur, pas un devis. La fourchette distribution inclut le kit de distribution et la pompe à eau (souvent changée en même temps) ; comptez vers le haut de la fourchette sur les versions poids lourd les plus chargées."
+  }
+}

@@ -197,8 +197,27 @@ _CHASSIS_PATTERNS = [
     # (contrairement à "master" seul) : match nu suffisant, même logique que
     # Movano/NV400 ci-dessus.
     ("Mercedes-Benz Sprinter", re.compile(r"\bsprinter\b", re.IGNORECASE)),
+    # "Transporter" seul est utilisé sans ambiguïté dans les annonces
+    # camping-car/van (T5/T6/T6.1) ; "VW"/"Volkswagen" n'est pas requis pour
+    # la même raison que Movano/NV400/Sprinter ci-dessus. "California" en
+    # revanche est un mot ambigu seul (toponyme) : on exige le préfixe
+    # marque pour ce fallback.
+    (
+        "Volkswagen Transporter",
+        re.compile(r"\btransporter\b|\b(?:vw|volkswagen)\s*california\b", re.IGNORECASE),
+    ),
+    # "Crafter" seul est sans ambiguïté dans ce contexte (pas un mot français
+    # courant, contrairement à "master") ; couvre aussi le Grand California
+    # (aménagement camping-car VW d'origine sur base Crafter II).
+    (
+        "Volkswagen Crafter",
+        re.compile(r"\bcrafter\b|\bgrand\s*california\b", re.IGNORECASE),
+    ),
+    # "Daily" seul est ambigu (mot anglais courant) : on exige le préfixe
+    # marque, contrairement à Sprinter/Crafter/Movano/NV400 ci-dessus.
+    ("Iveco Daily", re.compile(r"\biveco\s*daily\b", re.IGNORECASE)),
 ]
-_OTHER_CHASSIS_KEYWORDS = ["iveco daily", "volkswagen crafter"]
+_OTHER_CHASSIS_KEYWORDS = []
 
 # Marques de cellule couvertes par ce prototype (réputation vérifiée via
 # recherche rapide seulement — voir knowledge/cellule/*.json pour le détail
@@ -263,6 +282,7 @@ _SIRET_CAPTURE_RE = re.compile(r"\bsiret\s*:?\s*((?:\d[\s]?){14})", re.IGNORECAS
 _SUPPORTED_CHASSIS = {
     "Fiat Ducato", "Citroën Jumper", "Peugeot Boxer", "Ford Transit",
     "Renault Master", "Opel Movano", "Nissan NV400", "Mercedes-Benz Sprinter",
+    "Volkswagen Transporter", "Volkswagen Crafter", "Iveco Daily",
 }
 _SUPPORTED_CELLULES = set(_CELLULE_RE.keys())
 

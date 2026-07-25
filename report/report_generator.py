@@ -27,6 +27,9 @@ _RAPPELCONSO_QUERY = {
     "Opel Movano": ("opel", "movano"),
     "Nissan NV400": ("nissan", "nv400"),
     "Mercedes-Benz Sprinter": ("mercedes-benz", "sprinter"),
+    "Volkswagen Transporter": ("volkswagen", "transporter"),
+    "Volkswagen Crafter": ("volkswagen", "crafter"),
+    "Iveco Daily": ("iveco", "daily"),
 }
 
 
@@ -191,6 +194,9 @@ _CHASSIS_KEY_MAP = {
     "Ford Transit": "ford-transit",
     "Renault Master": "renault-master", "Opel Movano": "renault-master", "Nissan NV400": "renault-master",
     "Mercedes-Benz Sprinter": "mercedes-sprinter",
+    "Volkswagen Transporter": "vw-transporter",
+    "Volkswagen Crafter": "vw-crafter",
+    "Iveco Daily": "iveco-daily",
 }
 
 # Groupes de marques de châssis pour l'affichage — une plateforme mécanique
@@ -203,6 +209,9 @@ _CHASSIS_DISPLAY_GROUPS: list[tuple[str, ...]] = [
     ("Ford Transit",),
     ("Renault Master", "Opel Movano", "Nissan NV400"),
     ("Mercedes-Benz Sprinter",),
+    ("Volkswagen Transporter",),
+    ("Volkswagen Crafter",),
+    ("Iveco Daily",),
 ]
 
 

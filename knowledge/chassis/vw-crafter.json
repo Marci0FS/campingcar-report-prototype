@@ -1,0 +1,80 @@
+{
+  "chassis": "Volkswagen Crafter",
+  "_meta": {
+    "note": "Base curée à la main pour un prototype, à partir d'une recherche rapide (articles de blog/SEO indépendants convergents, fiches officielles rappel.conso.gouv.fr pour la partie rappels). Le Crafter I (2006-2016) a été développé et construit conjointement avec le Mercedes Sprinter NCV3 sur la même chaîne à Düsseldorf (mêmes moteurs de base) : ce partenariat a pris fin en 2016. Le Crafter II (2017+) repose sur une toute nouvelle plateforme indépendante développée avec MAN (partagée avec le MAN TGE), avec ses propres moteurs — les points ci-dessous distinguent donc bien les deux générations plutôt que de les traiter comme un même véhicule. Inclut le Volkswagen Grand California (aménagement camping-car d'origine VW sur base Crafter II) dans le champ rappel, pertinent pour ce prototype. Points marqués 'confidence: anecdotal' rapportés par des propriétaires/professionnels ou des articles indépendants sans source officielle vérifiée. Points marqués 'confidence: documented' s'appuient sur des sources publiques identifiables (fiche de rappel officielle, article nommant sa source technique).",
+    "last_reviewed": "2026-07-25"
+  },
+  "engines": [
+    {
+      "name": "2.5 TDI 5-cyl (Crafter I, 2006-2016, diesel — base technique Sprinter NCV3)",
+      "fuel": "Diesel",
+      "year_range": [2006, 2016],
+      "known_issues": [
+        {
+          "description": "Turbocompresseur fragile sur les versions 136 et 164 ch, avec un calage intempestif du dispositif de réglage dans le boîtier à géométrie variable : remplacement fréquemment nécessaire entre 150 000 et 200 000 km.",
+          "confidence": "anecdotal"
+        },
+        {
+          "description": "Problèmes d'injecteurs récurrents, avec une attention constante nécessaire sur le système d'injection selon le kilométrage.",
+          "confidence": "anecdotal"
+        },
+        {
+          "description": "Volant moteur signalé comme un point faible notoire sur cette génération, au même titre que le turbo et l'injection.",
+          "confidence": "anecdotal"
+        }
+      ]
+    },
+    {
+      "name": "2.0 TDI (Crafter II, 2017+, diesel — plateforme MAN indépendante)",
+      "fuel": "Diesel",
+      "year_range": [2017, 2099],
+      "known_issues": [
+        {
+          "description": "Pompe à eau : nombre de pannes anormalement élevé signalé sur la version 177 ch, avec des cas dès 40 000 km chez certains propriétaires.",
+          "confidence": "anecdotal"
+        },
+        {
+          "description": "Turbocompresseur et EGR pouvant présenter des soucis dès 80 000 km.",
+          "confidence": "anecdotal"
+        },
+        {
+          "description": "À partir des millésimes 2019, blocages liés à l'AdBlue, échecs de régénération du FAP et encrassement EGR régulièrement signalés sur les forums.",
+          "confidence": "anecdotal"
+        },
+        {
+          "description": "Boîte automatique 8 rapports Aisin : à-coups (shudder) signalés par certains utilisateurs.",
+          "confidence": "anecdotal"
+        }
+      ]
+    }
+  ],
+  "recall": {
+    "summary": "Deux campagnes de rappel documentées trouvées pour ce châssis : un défaut d'assemblage sur les Crafter II fabriqués entre le 16 octobre 2018 et le 4 mars 2020, où le câblage 230V dans la zone de l'airbag de tête pourrait avoir été mal installé (fiche rappel.conso.gouv.fr n°48637) ; et, spécifiquement pour le Volkswagen Grand California (aménagement camping-car d'origine sur base Crafter II) fabriqué entre janvier et août 2024, un test d'étanchéité de l'installation gaz non correctement réalisé en usine (dispositif de test défectueux), avec un risque de fuite de gaz au niveau du coffre où se trouvent les bouteilles (campagne 76AF, fiche rappel.conso.gouv.fr n°18084/48255). Aucune campagne massive et systématique du type Takata n'est établie de façon certaine pour ce prototype.",
+    "confidence": "documented",
+    "important": "Le statut de rappel dépend du numéro de série (VIN) exact du véhicule. Ce prototype ne peut pas certifier qu'une annonce précise est concernée : il doit systématiquement renvoyer l'acheteur vers la vérification officielle avant tout achat.",
+    "official_check_url": "https://www.rappel.conso.gouv.fr/"
+  },
+  "common_defects": [
+    {
+      "description": "Sur le Crafter II (2018+) : climatisation sujette à pannes (compresseur défectueux ou fuites de durites) à partir d'environ 60 000 km.",
+      "confidence": "anecdotal"
+    },
+    {
+      "description": "Sur le Crafter II : antivol de direction (ignition lock) pouvant poser problème dès 50 000 km, empêchant le démarrage du véhicule.",
+      "confidence": "anecdotal"
+    },
+    {
+      "description": "Retours d'expérience très hétérogènes sur les forums : certains exemplaires dépassent 300 000 km sans souci majeur quand d'autres connaissent des pannes précoces — l'historique d'entretien individuel du véhicule compte donc particulièrement sur ce modèle.",
+      "confidence": "anecdotal"
+    }
+  ],
+  "maintenance": {
+    "distribution": "Sur le Crafter I (2.5 TDI, 2006-2016) : courroie de distribution avec un remplacement impératif dès environ 80 000 km — intervalle nettement plus court que sur la plupart des autres châssis de ce comparatif, point de vigilance n°1 à l'achat sur cette génération (vérifier la date/kilométrage du dernier remplacement). Sur le Crafter II (2.0 TDI, 2017+) : distribution par chaîne, pas de remplacement périodique prévu par le constructeur en usage normal, mais à surveiller sur fort kilométrage comme sur les autres blocs à chaîne — à confirmer via le carnet d'entretien du véhicule précis, ne jamais présumer un intervalle sans vérifier.",
+    "revision_cost_eur_indicative": {
+      "vidange_simple": [90, 180],
+      "revision_complete": [300, 600],
+      "distribution": [600, 1200]
+    },
+    "note": "Fourchettes indicatives pour situer un ordre de grandeur, pas un devis. Intervalles de révision généralement compris entre 15 000 et 30 000 km ou 1-2 ans selon motorisation, PTAC et usage réel. Un fourgon aménagé lourd (souvent proche de 3,5 t en charge) sollicite freins, pneus et embrayage comme un camping-car classique, indépendamment du châssis."
+  }
+}

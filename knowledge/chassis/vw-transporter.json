@@ -1,0 +1,83 @@
+{
+  "chassis": "Volkswagen Transporter",
+  "_meta": {
+    "note": "Base curée à la main pour un prototype, à partir d'une recherche rapide (articles de blog/SEO indépendants convergents, forums propriétaires, fiches officielles rappel.conso.gouv.fr pour la partie rappels). Couvre les générations T5 (2003-2015, avec le restylage T5.1 en 2009) et T6/T6.1 (2015+), qui forment l'essentiel du parc camping-car/van d'occasion sur cette base — souvent en version California (aménagement VW d'origine, toit relevable) ou en conversion indépendante. Points marqués 'confidence: anecdotal' rapportés par des propriétaires/professionnels ou des articles indépendants sans source officielle vérifiée. Points marqués 'confidence: documented' s'appuient sur des sources publiques identifiables (fiche de rappel officielle, article nommant sa source technique).",
+    "last_reviewed": "2026-07-25"
+  },
+  "engines": [
+    {
+      "name": "2.5 TDI 5-cyl (T5, 2003-2009, diesel)",
+      "fuel": "Diesel",
+      "year_range": [2003, 2009],
+      "known_issues": [
+        {
+          "description": "Usure prématurée du volant moteur bi-masse (notamment sur le bloc BNZ), typiquement entre 100 000 et 160 000 km sur boîte manuelle : difficultés de passage de vitesse, bruits/vibrations. Remplacement complet (volant + embrayage + butée hydraulique) estimé entre 1400 et 2500 € selon garage indépendant ou concession.",
+          "confidence": "documented"
+        },
+        {
+          "description": "Encrassement progressif de la vanne EGR, comme sur la plupart des diesels de cette génération.",
+          "confidence": "documented"
+        }
+      ]
+    },
+    {
+      "name": "2.0 TDI (T5.1 restylé, 2009-2015, diesel)",
+      "fuel": "Diesel",
+      "year_range": [2009, 2015],
+      "known_issues": [
+        {
+          "description": "Injecteurs qui s'usent prématurément sur les blocs produits entre 2010 et 2015 : ratés d'allumage, difficultés de démarrage à froid.",
+          "confidence": "anecdotal"
+        },
+        {
+          "description": "Vanne EGR qui s'encrasse progressivement ; sur les versions Phase II, un défaut du circuit de refroidissement de l'EGR peut aller jusqu'à la casse moteur autour de 100 000 km si non traité à temps.",
+          "confidence": "anecdotal"
+        }
+      ]
+    },
+    {
+      "name": "2.0 TDI (T6 / T6.1, 2015+, diesel)",
+      "fuel": "Diesel",
+      "year_range": [2015, 2099],
+      "known_issues": [
+        {
+          "description": "Refroidisseur EGR fragile entre 80 000 et 120 000 km, en particulier sur les versions 150 et 204 ch : perte de liquide de refroidissement, risque de surchauffe. Réparation estimée à plus de 1500 € hors main d'œuvre.",
+          "confidence": "anecdotal"
+        },
+        {
+          "description": "Système AdBlue sujet à défaillances entre 60 000 et 100 000 km, souvent liées à une obstruction des conduits.",
+          "confidence": "anecdotal"
+        },
+        {
+          "description": "Sur boîte automatique double embrayage DSG 6 (DQ250) : usure prématurée de l'embrayage signalée dès 60 000 km. La DSG 7 (DQ500), plus rare sur ce modèle, serait mieux notée en fiabilité.",
+          "confidence": "anecdotal"
+        }
+      ]
+    }
+  ],
+  "recall": {
+    "summary": "Deux campagnes de rappel documentées trouvées pour ce châssis : corrosion du réservoir à carburant sur les T5 essence, pouvant à terme fragiliser la paroi jusqu'au risque de rupture du réservoir (fiche rappel.conso.gouv.fr n°4298) ; et mise à jour du calculateur de boîte de vitesses sur les T5/T6 produits entre 2009 et 2016, le véhicule passant directement en 7e rapport au lieu de la 6e entre 100 et 120 km/h, faussant la mesure des émissions lors du contrôle (fiche rappel.conso.gouv.fr n°20900, campagne groupée avec Amarok/Caddy/Crafter). Aucune campagne massive et systématique du type Takata n'est établie de façon certaine pour ce prototype.",
+    "confidence": "documented",
+    "important": "Le statut de rappel dépend du numéro de série (VIN) exact du véhicule. Ce prototype ne peut pas certifier qu'une annonce précise est concernée : il doit systématiquement renvoyer l'acheteur vers la vérification officielle avant tout achat.",
+    "official_check_url": "https://www.rappel.conso.gouv.fr/"
+  },
+  "common_defects": [
+    {
+      "description": "Sur les versions California (aménagement VW d'origine) ou conversions indépendantes avec toit relevable : les joints et soufflets du toit se dégradent avec le temps (UV, cycles thermiques, manipulations répétées), avec les premières infiltrations généralement constatées après 5 à 8 ans d'usage, souvent aux angles ou le long des fermetures éclair. Remplacement complet du soufflet estimé entre 3000 et 5000 € ; entretien préventif recommandé autour de 150-300 €/an pour préserver l'étanchéité.",
+      "confidence": "anecdotal"
+    },
+    {
+      "description": "Capteur de régime moteur qui lâche régulièrement sur les versions diesel, empêchant le démarrage ou coupant le moteur en roulant.",
+      "confidence": "anecdotal"
+    }
+  ],
+  "maintenance": {
+    "distribution": "Contrairement aux autres châssis de ce comparatif (majoritairement à chaîne sur les blocs récents), le Transporter reste équipé d'une courroie de distribution sur l'essentiel de la gamme essence et diesel T5/T6 : environ 60 000-80 000 km ou 4-5 ans sur essence, et 120 000-210 000 km selon motorisation/année sur diesel (les garages recommandent souvent d'anticiper autour de 150 000-180 000 km par prudence) — à confirmer via le carnet d'entretien du véhicule précis, ne jamais présumer un intervalle sans vérifier.",
+    "revision_cost_eur_indicative": {
+      "vidange_simple": [120, 220],
+      "revision_complete": [350, 700],
+      "distribution": [700, 1400]
+    },
+    "note": "Fourchettes indicatives pour situer un ordre de grandeur, pas un devis. Un budget annuel d'entretien de 800 à 1200 € (pour ~20 000 km/an) est régulièrement cité toutes interventions courantes confondues ; prévoir un budget nettement supérieur en cas de défaillance EGR, DSG ou volant moteur bi-masse (non inclus dans ces fourchettes)."
+  }
+}
