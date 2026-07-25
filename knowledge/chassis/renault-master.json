@@ -1,0 +1,60 @@
+{
+  "chassis": "Renault Master",
+  "_meta": {
+    "note": "Base curée à la main pour un prototype, à partir d'une recherche rapide (articles de blog/SEO indépendants convergents). Points marqués 'confidence: anecdotal' rapportés par des propriétaires/professionnels sans source officielle vérifiée.",
+    "last_reviewed": "2026-07-24"
+  },
+  "engines": [
+    {
+      "name": "2.3 dCi (2010-2016, diesel)",
+      "fuel": "Diesel",
+      "year_range": [2010, 2016],
+      "known_issues": [
+        {
+          "description": "Surconsommation d'huile signalée, nécessitant des appoints fréquents — vérifier le niveau d'huile et l'historique d'appoints à l'achat.",
+          "confidence": "anecdotal"
+        },
+        {
+          "description": "Vanne EGR qui s'encrasse rapidement, coût de remplacement autour de 800 € pour la vanne seule.",
+          "confidence": "anecdotal"
+        },
+        {
+          "description": "Pompe à eau pouvant lâcher soudainement, entraînant un risque de surchauffe moteur important si non détecté à temps.",
+          "confidence": "anecdotal"
+        }
+      ]
+    },
+    {
+      "name": "2.3 dCi (2017+, diesel, motorisation revue)",
+      "fuel": "Diesel",
+      "year_range": [2017, 2099],
+      "known_issues": [
+        {
+          "description": "Génération plus récente, moins de retours négatifs identifiés dans la recherche rapide effectuée pour ce prototype — à ne pas interpréter comme fiabilité garantie, juste absence de signal fort trouvé.",
+          "confidence": "anecdotal"
+        }
+      ]
+    }
+  ],
+  "recall": {
+    "summary": "Le Master, comme tout véhicule, peut faire l'objet de campagnes de rappel constructeur ponctuelles selon le millésime et le numéro de série. Aucune campagne majeure et systématique du type Takata n'est établie de façon certaine pour ce prototype.",
+    "confidence": "documented",
+    "important": "Le statut de rappel dépend du numéro de série (VIN) exact du véhicule. Ce prototype ne peut pas certifier qu'une annonce précise est concernée : il doit systématiquement renvoyer l'acheteur vers la vérification officielle avant tout achat.",
+    "official_check_url": "https://www.rappel.conso.gouv.fr/"
+  },
+  "common_defects": [
+    {
+      "description": "Sur le 2.3 dCi 2010-2016, la combinaison surconsommation d'huile + EGR + pompe à eau fragile en fait une génération à inspecter avec un soin particulier avant achat.",
+      "confidence": "anecdotal"
+    }
+  ],
+  "maintenance": {
+    "distribution": "Courroie de distribution à remplacer selon préconisation constructeur (généralement autour de 120 000-160 000 km ou 5-6 ans selon millésime — à confirmer via le carnet d'entretien du véhicule précis, ne jamais présumer un intervalle sans vérifier).",
+    "revision_cost_eur_indicative": {
+      "vidange_simple": [120, 220],
+      "revision_complete": [300, 600],
+      "distribution": [700, 1200]
+    },
+    "note": "Fourchettes indicatives pour situer un ordre de grandeur, pas un devis. Prévoir un budget supplémentaire si la pompe à eau ou la vanne EGR doivent être remplacées (non incluses dans ces fourchettes)."
+  }
+}

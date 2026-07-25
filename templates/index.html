@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rapport de vigilance — camping-car / van</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<div class="wrap">
+
+  <div class="masthead">
+    <svg class="masthead-mark" viewBox="0 0 220 110" aria-hidden="true">
+      <line x1="4" y1="92" x2="216" y2="92"/>
+      <path d="M10 92 V46 Q10 40 16 40 H150 L182 62 V92"/>
+      <path d="M150 40 L150 62 L182 62"/>
+      <rect x="26" y="50" width="32" height="18" rx="2"/>
+      <rect x="68" y="50" width="32" height="18" rx="2"/>
+      <rect x="110" y="50" width="22" height="18" rx="2"/>
+      <rect x="60" y="30" width="18" height="9" rx="2"/>
+      <circle cx="40" cy="92" r="12"/>
+      <circle cx="160" cy="92" r="12"/>
+    </svg>
+    <span class="kicker">Dossier de contrôle — avant achat</span>
+    <h1>Rapport de vigilance camping-car / van</h1>
+    <p>Colle le texte d'une annonce (copié depuis Leboncoin, La Centrale...). Aucun lien n'est récupéré automatiquement.</p>
+  </div>
+
+  <div class="scope-note">
+    <span class="kicker">Périmètre</span>
+    <span>Châssis couverts : <strong>Fiat Ducato / Citroën Jumper / Peugeot Boxer</strong>, <strong>Ford Transit</strong>, <strong>Renault Master</strong>. Réputation étanchéité disponible pour 15 marques de cellule (CI, Rapido, Hymer, Carthago, Frankia, Knaus, Dethleffs, Bürstner, Pilote, Chausson, Challenger, Adria, Laika, Benimar, Etrusco) — les autres marques reçoivent un dossier partiel (mécanique châssis, sans réputation cellule).</span>
+  </div>
+
+  <form method="post">
+    <textarea name="ad_text" placeholder="Colle ici le texte complet de l'annonce...">{{ pasted_text }}</textarea>
+    <br>
+    <button type="submit">Analyser l'annonce</button>
+  </form>
+
+  {% if report %}
+    {% if report.level == "unsupported" %}
+      <div class="unsupported">
+        <span class="stamp defavorable">Hors périmètre</span>
+        <p>Châssis détecté : <strong>{{ report.detected_chassis or "non identifié" }}</strong></p>
+        <p>Cellule détectée : <strong>{{ report.detected_cellule or "non identifiée" }}</strong></p>
+        <p>Ce dossier ne couvre que Fiat Ducato/Citroën Jumper/Peugeot Boxer, Ford Transit ou Renault Master comme châssis. Aucun rapport n'est généré, faute de base mécanique à laquelle rattacher un avis.</p>
+      </div>
+    {% else %}
+
+      <div class="dossier-body">
+      <div class="dossier">
+        <p class="dossier-title">
+          {{ report.chassis_name }} — cellule {{ report.cellule_name }}
+          {% if report.level == "partial" %}<span class="tag anecdotique">dossier partiel</span>{% endif %}
+        </p>
+        <div class="fact-grid">
+          <div class="fact">
+            <span class="fact-label">Prix</span>
+            <span class="fact-value">{{ (report.ad.price_eur ~ " €") if report.ad.price_eur else "—" }}</span>
+          </div>
+          <div class="fact">
+            <span class="fact-label">Kilométrage</span>
+            <span class="fact-value">{{ (report.ad.mileage_km ~ " km") if report.ad.mileage_km else "—" }}</span>
+          </div>
+          <div class="fact">
+            <span class="fact-label">Mise en circulation</span>
+            <span class="fact-value">
+              {%- if report.ad.registration_month and report.ad.registration_year -%}
+                {{ "%02d"|format(report.ad.registration_month) }}/{{ report.ad.registration_year }}
+              {%- elif report.ad.registration_year -%}
+                {{ report.ad.registration_year }}
+              {%- else -%}
+                —
+              {%- endif -%}
+            </span>
+          </div>
+          <div class="fact">
+            <span class="fact-label">Type de carrosserie</span>
+            <span class="fact-value">{{ report.ad.detected_body_type or "—" }}</span>
+          </div>
+        </div>
+        {% if report.ad.warnings %}
+        <div class="warnings">
+          {% for w in report.ad.warnings %}<p>⚠ {{ w }}</p>{% endfor %}
+        </div>
+        {% endif %}
+      </div>
+
+      <div class="rubrique vendeur">
+        <div class="rubrique-head">
+          <div>
+            <span class="kicker">§ Vendeur</span>
+            <h2>Statut du vendeur</h2>
+          </div>
+          <span class="stamp {{ report.seller.level }}">{{ report.seller.label }}</span>
+        </div>
+        <p>{{ report.seller.detail }}</p>
+        {% if report.seller.entreprise is not none %}
+          <div class="entreprise-info">
+            {% if not report.seller.entreprise.available %}
+              <p class="live-recalls-empty">Recherche entreprise indisponible pour le moment (API injoignable).</p>
+            {% elif report.seller.entreprise.info is none %}
+              <p class="live-recalls-empty">Aucune entreprise trouvée pour le SIRET {{ report.ad.seller_siret }}.</p>
+            {% else %}
+              <p class="entreprise-nom">{{ report.seller.entreprise.info.raison_sociale }}</p>
+              <p>{{ report.seller.entreprise.info.adresse or "Adresse non disponible" }}</p>
+              <p>
+                {%- if report.seller.entreprise.info.anciennete_annees is not none -%}
+                  En activité depuis le {{ report.seller.entreprise.info.date_creation }} (~{{ report.seller.entreprise.info.anciennete_annees }} an(s))
+                {%- else -%}
+                  Date de création inconnue
+                {%- endif -%}
+                — statut <strong>{{ report.seller.entreprise.info.etat_administratif }}</strong>
+              </p>
+              <p class="entreprise-source">Source : recherche-entreprises.api.gouv.fr (Sirene/INSEE), SIRET {{ report.ad.seller_siret }}</p>
+            {% endif %}
+          </div>
+        {% endif %}
+      </div>
+
+      <div class="rubrique marche">
+        <div class="rubrique-head">
+          <div>
+            <span class="kicker">§ Marché</span>
+            <h2>Cohérence prix</h2>
+          </div>
+          <span class="stamp {{ report.price_level }}">{{ report.price.verdict }}</span>
+        </div>
+        <p>{{ report.price.detail }}</p>
+      </div>
+
+      <div class="rubrique water">
+        <div class="rubrique-head">
+          <div>
+            <span class="kicker">§ Étanchéité</span>
+            <h2>Réputation de la cellule</h2>
+          </div>
+          <span class="stamp {{ report.etancheite.level }}">
+            {%- if report.etancheite.level == "favorable" -%}Favorable
+            {%- elif report.etancheite.level == "defavorable" -%}Vigilance renforcée
+            {%- elif report.etancheite.tag == "non documenté" -%}Non documenté
+            {%- else -%}Signal neutre
+            {%- endif -%}
+          </span>
+        </div>
+        <p><span class="tag {{ 'documente' if report.etancheite.tag == 'documenté' else 'anecdotique' }}">{{ report.etancheite.tag }}</span> {{ report.etancheite.summary }}</p>
+        <p><strong>Recommandation —</strong> {{ report.etancheite.recommendation }}</p>
+      </div>
+
+      <div class="rubrique rappel">
+        <span class="kicker">§ Rappel constructeur</span>
+        <h2>Châssis</h2>
+        <div class="recall-box">
+          <p>{{ report.recall.summary }}</p>
+          <p>⚠ {{ report.recall.important }}</p>
+          <p>Vérifier ce véhicule précis ici : <a href="{{ report.recall.official_check_url }}" target="_blank" rel="noopener">{{ report.recall.official_check_url }}</a></p>
+        </div>
+
+        <div class="live-recalls">
+          <span class="kicker">Recherche en direct — RappelConso (data.economie.gouv.fr)</span>
+          {% if not report.live_recalls.available %}
+            <p class="live-recalls-empty">Indisponible pour le moment (API injoignable) — se référer au lien officiel ci-dessus.</p>
+          {% elif not report.live_recalls.items %}
+            <p class="live-recalls-empty">Aucune campagne publiée trouvée pour ce modèle à ce jour. Ça ne garantit pas l'absence de rappel sur ce véhicule précis (recherche par marque/modèle, pas par numéro de série).</p>
+          {% else %}
+            <ul class="live-recall-list">
+              {% for item in report.live_recalls.items %}
+                <li>
+                  <span class="live-recall-date">{{ item.date_publication or "date inconnue" }}</span>
+                  <div>
+                    <p class="live-recall-title">{{ item.marque }} — {{ item.modele }}</p>
+                    <p>{{ item.motif }}{% if item.risque %} <span class="tag anecdotique">{{ item.risque }}</span>{% endif %}</p>
+                    <a href="{{ item.url }}" target="_blank" rel="noopener">Voir la fiche de rappel</a>
+                  </div>
+                </li>
+              {% endfor %}
+            </ul>
+          {% endif %}
+        </div>
+      </div>
+
+      <div class="rubrique mecanique">
+        <span class="kicker">§ Mécanique</span>
+        <h2>Points de vigilance — châssis</h2>
+        {% for engine in report.engines %}
+          <h3>{{ engine.name }}</h3>
+          <ul>
+            {% for issue in engine.known_issues %}
+              <li><span class="tag {{ 'documente' if issue.tag == 'documenté' else 'anecdotique' }}">{{ issue.tag }}</span><span>{{ issue.description }}</span></li>
+            {% endfor %}
+          </ul>
+        {% endfor %}
+      </div>
+
+      <div class="rubrique defauts">
+        <span class="kicker">§ Défauts</span>
+        <h2>Défauts fréquents signalés</h2>
+        <ul>
+          {% for defect in report.common_defects %}
+            <li><span class="tag {{ 'documente' if defect.tag == 'documenté' else 'anecdotique' }}">{{ defect.tag }}</span><span>{{ defect.description }}</span></li>
+          {% endfor %}
+        </ul>
+      </div>
+
+      <div class="rubrique entretien">
+        <span class="kicker">§ Entretien</span>
+        <h2>Coûts et échéances — châssis</h2>
+        <p>{{ report.maintenance.distribution }}</p>
+        <p>
+          <span class="tag anecdotique">indicatif</span>
+          Vidange {{ report.maintenance.revision_cost_eur_indicative.vidange_simple[0] }}–{{ report.maintenance.revision_cost_eur_indicative.vidange_simple[1] }} €
+          · révision {{ report.maintenance.revision_cost_eur_indicative.revision_complete[0] }}–{{ report.maintenance.revision_cost_eur_indicative.revision_complete[1] }} €
+          · distribution {{ report.maintenance.revision_cost_eur_indicative.distribution[0] }}–{{ report.maintenance.revision_cost_eur_indicative.distribution[1] }} €
+        </p>
+        <p style="color: var(--ink-muted); font-size: 0.85rem;">{{ report.maintenance.note }}</p>
+      </div>
+
+      <div class="rubrique checklist-section">
+        <span class="kicker">§ Sur place</span>
+        <h2>Checklist de vérification physique</h2>
+        <ol class="checklist">
+          {% for item in report.checklist %}
+            <li>{{ item }}</li>
+          {% endfor %}
+        </ol>
+      </div>
+      </div>
+
+    {% endif %}
+  {% endif %}
+
+</div>
+</body>
+</html>

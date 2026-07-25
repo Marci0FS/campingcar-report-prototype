@@ -1,0 +1,33 @@
+{
+  "cellule": "Adria",
+  "_meta": {
+    "note": "Base curée à la main à partir d'une recherche rapide (articles de blog/SEO indépendants convergents), pas de source officielle ou de forum spécialisé recoupé directement. À revérifier avant tout usage au-delà du prototype.",
+    "last_reviewed": "2026-07-24",
+    "sources_note": "Marque slovène régulièrement citée parmi les marques fiables, soutenue par un réseau après-vente jugé efficace ; certains modèles spécifiques (Matrix, Twin) souvent cités positivement."
+  },
+  "etancheite_reputation": {
+    "level": "favorable",
+    "summary": "Adria est régulièrement citée parmi les marques fiables, avec un réseau après-vente jugé efficace et bien présent.",
+    "confidence": "anecdotal",
+    "recommendation": "Réputation favorable ne dispense pas d'un contrôle d'entretien des joints (recommandé tous les 2 ans quelle que soit la marque) : même une bonne réputation de marque n'empêche pas un défaut d'entretien individuel sur un véhicule précis."
+  },
+  "common_defects": [
+    {
+      "description": "Aucun défaut systémique majeur identifié dans la recherche rapide effectuée pour ce prototype — à ne pas interpréter comme une absence totale de défaut, juste une absence de signal fort trouvé.",
+      "confidence": "anecdotal"
+    }
+  ],
+  "price_reference_eur": {
+    "note": "Fourchettes très approximatives, positionnement milieu de gamme du marché européen. Ne jamais présenter comme une cote fiable — comparer avec des annonces similaires actives.",
+    "bands": [
+      {"body_type": "Fourgon aménagé / Van", "year_range": [2016, 2019], "price_range_eur": [29000, 50000]},
+      {"body_type": "Fourgon aménagé / Van", "year_range": [2020, 2026], "price_range_eur": [45000, 72000]},
+      {"body_type": "Profilé", "year_range": [2016, 2019], "price_range_eur": [22000, 36000]},
+      {"body_type": "Profilé", "year_range": [2020, 2026], "price_range_eur": [34000, 54000]},
+      {"body_type": "Capucine", "year_range": [2016, 2019], "price_range_eur": [14000, 27000]},
+      {"body_type": "Capucine", "year_range": [2020, 2026], "price_range_eur": [25000, 40000]},
+      {"body_type": "Intégral", "year_range": [2016, 2019], "price_range_eur": [36000, 63000]},
+      {"body_type": "Intégral", "year_range": [2020, 2026], "price_range_eur": [59000, 99000]}
+    ]
+  }
+}

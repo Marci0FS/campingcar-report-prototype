@@ -1,0 +1,33 @@
+{
+  "cellule": "Bürstner",
+  "_meta": {
+    "note": "Base curée à la main à partir d'une recherche rapide (articles de blog/SEO indépendants convergents), pas de source officielle ou de forum spécialisé recoupé directement. À revérifier avant tout usage au-delà du prototype.",
+    "last_reviewed": "2026-07-24",
+    "sources_note": "Citée aux côtés de Rapido, Hymer et Pilote parmi les marques les mieux réputées en étanchéité/longévité de cellule."
+  },
+  "etancheite_reputation": {
+    "level": "favorable",
+    "summary": "Bürstner revient de façon répétée dans les comparatifs comme une marque bien réputée en étanchéité et longévité de cellule.",
+    "confidence": "anecdotal",
+    "recommendation": "Réputation favorable ne dispense pas d'un contrôle d'entretien des joints (recommandé tous les 2 ans quelle que soit la marque) : même une bonne réputation de marque n'empêche pas un défaut d'entretien individuel sur un véhicule précis."
+  },
+  "common_defects": [
+    {
+      "description": "Aucun défaut systémique majeur identifié dans la recherche rapide effectuée pour ce prototype — à ne pas interpréter comme une absence totale de défaut, juste une absence de signal fort trouvé.",
+      "confidence": "anecdotal"
+    }
+  ],
+  "price_reference_eur": {
+    "note": "Fourchettes très approximatives, positionnement milieu-haut de gamme du marché. Ne jamais présenter comme une cote fiable — comparer avec des annonces similaires actives.",
+    "bands": [
+      {"body_type": "Fourgon aménagé / Van", "year_range": [2016, 2019], "price_range_eur": [32000, 55000]},
+      {"body_type": "Fourgon aménagé / Van", "year_range": [2020, 2026], "price_range_eur": [50000, 80000]},
+      {"body_type": "Profilé", "year_range": [2016, 2019], "price_range_eur": [24000, 40000]},
+      {"body_type": "Profilé", "year_range": [2020, 2026], "price_range_eur": [38000, 60000]},
+      {"body_type": "Capucine", "year_range": [2016, 2019], "price_range_eur": [16000, 30000]},
+      {"body_type": "Capucine", "year_range": [2020, 2026], "price_range_eur": [28000, 45000]},
+      {"body_type": "Intégral", "year_range": [2016, 2019], "price_range_eur": [40000, 70000]},
+      {"body_type": "Intégral", "year_range": [2020, 2026], "price_range_eur": [65000, 110000]}
+    ]
+  }
+}

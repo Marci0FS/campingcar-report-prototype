@@ -1,0 +1,52 @@
+{
+  "chassis": "Fiat Ducato",
+  "_meta": {
+    "note": "Base curée à la main pour un prototype. Le Ducato partage sa plateforme avec le Citroën Jumper et le Peugeot Boxer (badge-engineering) : les points mécaniques ci-dessous s'appliquent en général aux trois. Points marqués 'confidence: anecdotal' rapportés par des propriétaires/professionnels sans source officielle vérifiée. Points marqués 'confidence: documented' s'appuient sur des sources publiques identifiables.",
+    "last_reviewed": "2026-07-24"
+  },
+  "engines": [
+    {
+      "name": "MultiJet 2.2 / 2.3 (diesel)",
+      "fuel": "Diesel",
+      "known_issues": [
+        {
+          "description": "Courroie de distribution (et non chaîne) sur ces blocs : intervalle constructeur à respecter strictement, une rupture entraîne des dégâts moteur importants. Point de vigilance n°1 à l'achat : demander la date/kilométrage du dernier remplacement.",
+          "confidence": "documented"
+        },
+        {
+          "description": "Encrassement de la vanne EGR et du filtre à particules (FAP) sur usage majoritairement urbain/courts trajets, comme sur la plupart des diesels de cette génération.",
+          "confidence": "documented"
+        },
+        {
+          "description": "Volant moteur bi-masse : usure signalée sur fort kilométrage, se traduit par des bruits/vibrations à l'embrayage.",
+          "confidence": "anecdotal"
+        }
+      ]
+    }
+  ],
+  "recall": {
+    "summary": "Le Ducato, comme tout véhicule, peut faire l'objet de campagnes de rappel constructeur ponctuelles selon le millésime et le numéro de série. Aucune campagne majeure et systématique du type Takata n'est établie de façon certaine pour ce prototype.",
+    "confidence": "documented",
+    "important": "Le statut de rappel dépend du numéro de série (VIN) exact du véhicule. Ce prototype ne peut pas certifier qu'une annonce précise est concernée : il doit systématiquement renvoyer l'acheteur vers la vérification officielle avant tout achat.",
+    "official_check_url": "https://www.rappel.conso.gouv.fr/"
+  },
+  "common_defects": [
+    {
+      "description": "Usure des ressorts à lames arrière / suspension sous le poids de la cellule, plus marquée que sur un usage utilitaire standard vu la charge embarquée d'un camping-car.",
+      "confidence": "anecdotal"
+    },
+    {
+      "description": "Système AdBlue (Euro 6) : pannes de capteur/sonde signalées, comme sur la plupart des diesels récents équipés.",
+      "confidence": "anecdotal"
+    }
+  ],
+  "maintenance": {
+    "distribution": "Courroie de distribution à remplacer selon préconisation constructeur (généralement autour de 120 000-150 000 km ou 5-6 ans selon millésime — à confirmer via le carnet d'entretien du véhicule précis, ne jamais présumer un intervalle sans vérifier).",
+    "revision_cost_eur_indicative": {
+      "vidange_simple": [120, 220],
+      "revision_complete": [300, 600],
+      "distribution": [700, 1200]
+    },
+    "note": "Fourchettes indicatives pour situer un ordre de grandeur, pas un devis. Un poids-lourd léger aménagé coûte généralement plus cher à entretenir qu'une simple camionnette du même châssis."
+  }
+}

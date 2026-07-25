@@ -1,0 +1,41 @@
+{
+  "cellule": "Etrusco",
+  "_meta": {
+    "note": "Base curée à la main pour un prototype, à partir d'une recherche rapide (page FAQ/communication officielle du constructeur + essais indépendants de la presse spécialisée), PAS de source officielle ou de forum spécialisé recoupé directement. Etrusco a moins de recul en ligne que les marques françaises historiques de cette base (CI, Rapido...) : peu de témoignages propriétaires détaillés trouvés lors de la recherche. À revérifier via camping-car.com ou la presse spécialisée avant toute utilisation au-delà du prototype.",
+    "last_reviewed": "2026-07-24",
+    "sources_note": "Page FAQ constructeur (garantie étanchéité 7 ans), essais indépendants (Camping-car Magazine, Campingcarlesite, For Nomad, le-petit-marcel.eu). Aucune convergence de témoignages propriétaires trouvée dans un sens ou dans l'autre sur l'étanchéité, contrairement à CI (négatif) ou Rapido/Hymer (positif) dans cette même base — d'où un niveau 'neutre' plutôt qu'un verdict tranché."
+  },
+  "etancheite_reputation": {
+    "level": "neutre",
+    "summary": "Etrusco est la marque d'entrée de gamme du groupe Erwin Hymer (même groupe que Hymer, fabrication en Toscane, Italie). La recherche rapide effectuée pour ce prototype n'a fait remonter ni témoignages convergents d'infiltration (contrairement à CI), ni retours propriétaires détaillés sur la durée confirmant une bonne réputation (contrairement à Rapido/Hymer) : la marque est trop récente sur le marché français pour avoir beaucoup de recul en ligne. Le principal signal identifié est commercial, pas un retour d'expérience : une garantie étanchéité annoncée à 7 ans (portée de 5 à 7 ans en 2020), mais conditionnée à un contrôle annuel payant par un réseau agréé pour rester valide.",
+    "confidence": "anecdotal",
+    "recommendation": "Sur un véhicule d'occasion, exiger la preuve que les contrôles d'étanchéité annuels ont bien été réalisés et facturés chaque année depuis l'achat neuf : un contrôle manqué fait perdre la garantie étanchéité constructeur, ce qui annule l'argument commercial principal de la marque. Un test d'humidité récent reste recommandé, comme pour toute marque, en l'absence de retours propriétaires suffisants pour trancher."
+  },
+  "common_defects": [
+    {
+      "description": "Isolation hivernale jugée juste par au moins un essai indépendant hors des packs d'isolation renforcée en option — point à surveiller pour un usage en intersaison ou hivernal.",
+      "confidence": "anecdotal"
+    },
+    {
+      "description": "Charge utile resserrée sur les modèles compacts (souvent 400-500 kg annoncés en sortie d'usine), qui se réduit vite une fois les options et les pleins d'eau/gaz ajoutés — vérifier le PTAC et la charge utile réelle sur la carte grise plutôt que sur la fiche commerciale.",
+      "confidence": "anecdotal"
+    },
+    {
+      "description": "Réseau de distributeurs agréés plus clairsemé que les marques françaises historiques — vérifier qu'un point de service agréé existe à proximité avant achat, notamment pour le suivi de la garantie étanchéité qui conditionne le contrôle annuel.",
+      "confidence": "anecdotal"
+    }
+  ],
+  "price_reference_eur": {
+    "note": "Fourchettes très approximatives, positionnement entrée de gamme ('premier prix') du marché, en dessous de CI dans la recherche effectuée. Ne jamais présenter comme une cote fiable — comparer avec des annonces similaires actives.",
+    "bands": [
+      {"body_type": "Fourgon aménagé / Van", "year_range": [2016, 2019], "price_range_eur": [22000, 40000]},
+      {"body_type": "Fourgon aménagé / Van", "year_range": [2020, 2026], "price_range_eur": [35000, 60000]},
+      {"body_type": "Profilé", "year_range": [2016, 2019], "price_range_eur": [16000, 28000]},
+      {"body_type": "Profilé", "year_range": [2020, 2026], "price_range_eur": [28000, 46000]},
+      {"body_type": "Capucine", "year_range": [2016, 2019], "price_range_eur": [11000, 20000]},
+      {"body_type": "Capucine", "year_range": [2020, 2026], "price_range_eur": [20000, 34000]},
+      {"body_type": "Intégral", "year_range": [2016, 2019], "price_range_eur": [26000, 45000]},
+      {"body_type": "Intégral", "year_range": [2020, 2026], "price_range_eur": [42000, 70000]}
+    ]
+  }
+}

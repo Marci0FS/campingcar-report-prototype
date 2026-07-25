@@ -1,0 +1,56 @@
+{
+  "chassis": "Ford Transit",
+  "_meta": {
+    "note": "Base curée à la main pour un prototype, à partir d'une recherche rapide (articles de blog/SEO indépendants convergents). Points marqués 'confidence: anecdotal' rapportés par des propriétaires/professionnels sans source officielle vérifiée.",
+    "last_reviewed": "2026-07-24"
+  },
+  "engines": [
+    {
+      "name": "2.2 TDCi (2011-2015, diesel)",
+      "fuel": "Diesel",
+      "year_range": [2011, 2015],
+      "known_issues": [
+        {
+          "description": "Chaîne de distribution particulièrement fragile sur ce millésime, avec des cas de rupture sans préavis pouvant détruire le moteur. Point de vigilance n°1 à l'achat sur cette génération : historique d'entretien et bruits moteur à froid.",
+          "confidence": "anecdotal"
+        },
+        {
+          "description": "Injecteurs qui se dégradent prématurément et turbo signalé comme fragile sur cette génération.",
+          "confidence": "anecdotal"
+        }
+      ]
+    },
+    {
+      "name": "2.0 EcoBlue (2016+, diesel)",
+      "fuel": "Diesel",
+      "year_range": [2016, 2099],
+      "known_issues": [
+        {
+          "description": "Génération plus récente, moins de retours négatifs identifiés dans la recherche rapide effectuée pour ce prototype — à ne pas interpréter comme fiabilité garantie, juste absence de signal fort trouvé.",
+          "confidence": "anecdotal"
+        }
+      ]
+    }
+  ],
+  "recall": {
+    "summary": "Le Transit, comme tout véhicule, peut faire l'objet de campagnes de rappel constructeur ponctuelles selon le millésime et le numéro de série. Aucune campagne majeure et systématique du type Takata n'est établie de façon certaine pour ce prototype.",
+    "confidence": "documented",
+    "important": "Le statut de rappel dépend du numéro de série (VIN) exact du véhicule. Ce prototype ne peut pas certifier qu'une annonce précise est concernée : il doit systématiquement renvoyer l'acheteur vers la vérification officielle avant tout achat.",
+    "official_check_url": "https://www.rappel.conso.gouv.fr/"
+  },
+  "common_defects": [
+    {
+      "description": "Sur le 2.2 TDCi 2011-2015, réparation liée à la chaîne de distribution estimée entre 2000 € et 8000 € selon l'ampleur des dégâts si la rupture a endommagé le moteur.",
+      "confidence": "anecdotal"
+    }
+  ],
+  "maintenance": {
+    "distribution": "Chaîne de distribution sur les blocs TDCi/EcoBlue (pas de remplacement périodique prévu par le constructeur en usage normal, mais tendeur/chaîne à surveiller sur fort kilométrage, en particulier sur le 2.2 TDCi 2011-2015 où la fragilité est spécifiquement signalée).",
+    "revision_cost_eur_indicative": {
+      "vidange_simple": [120, 220],
+      "revision_complete": [300, 600],
+      "distribution": [2000, 8000]
+    },
+    "note": "Fourchettes indicatives pour situer un ordre de grandeur, pas un devis. La fourchette distribution est large car elle inclut les cas de rupture avec dégâts moteur, bien plus coûteux qu'un simple remplacement préventif."
+  }
+}

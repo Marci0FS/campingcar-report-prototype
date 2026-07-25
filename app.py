@@ -1,0 +1,31 @@
+"""Interface web minimale du prototype : coller le texte d'une annonce,
+obtenir le rapport structuré. Même pipeline que cli.py (parser + report),
+juste une présentation HTML au lieu du terminal.
+"""
+
+from __future__ import annotations
+
+from flask import Flask, render_template, request
+
+from parser.ad_text_parser import parse_ad_text
+from report.report_generator import build_report_context
+
+app = Flask(__name__)
+
+
+@app.route("/", methods=["GET", "POST"])
+def index():
+    context = None
+    pasted_text = ""
+
+    if request.method == "POST":
+        pasted_text = request.form.get("ad_text", "")
+        if pasted_text.strip():
+            ad = parse_ad_text(pasted_text)
+            context = build_report_context(ad)
+
+    return render_template("index.html", report=context, pasted_text=pasted_text)
+
+
+if __name__ == "__main__":
+    app.run(debug=True, port=5051)
