@@ -193,8 +193,12 @@ _CHASSIS_PATTERNS = [
     # ambiguïté (contrairement à "master" seul) : match nu suffisant.
     ("Opel Movano", re.compile(r"\bmovano\b", re.IGNORECASE)),
     ("Nissan NV400", re.compile(r"\bnv[\s-]?400\b", re.IGNORECASE)),
+    # Nom de modèle propre et sans ambiguïté dans un contexte camping-car/van
+    # (contrairement à "master" seul) : match nu suffisant, même logique que
+    # Movano/NV400 ci-dessus.
+    ("Mercedes-Benz Sprinter", re.compile(r"\bsprinter\b", re.IGNORECASE)),
 ]
-_OTHER_CHASSIS_KEYWORDS = ["iveco daily", "mercedes sprinter", "volkswagen crafter"]
+_OTHER_CHASSIS_KEYWORDS = ["iveco daily", "volkswagen crafter"]
 
 # Marques de cellule couvertes par ce prototype (réputation vérifiée via
 # recherche rapide seulement — voir knowledge/cellule/*.json pour le détail
@@ -258,7 +262,7 @@ _SIRET_CAPTURE_RE = re.compile(r"\bsiret\s*:?\s*((?:\d[\s]?){14})", re.IGNORECAS
 # doit rester synchronisé avec les clés utilisées dans report_generator.py.
 _SUPPORTED_CHASSIS = {
     "Fiat Ducato", "Citroën Jumper", "Peugeot Boxer", "Ford Transit",
-    "Renault Master", "Opel Movano", "Nissan NV400",
+    "Renault Master", "Opel Movano", "Nissan NV400", "Mercedes-Benz Sprinter",
 }
 _SUPPORTED_CELLULES = set(_CELLULE_RE.keys())
 

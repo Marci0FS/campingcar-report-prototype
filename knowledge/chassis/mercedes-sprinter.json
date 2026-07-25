@@ -1,0 +1,102 @@
+{
+  "chassis": "Mercedes-Benz Sprinter",
+  "_meta": {
+    "note": "Base curée à la main pour un prototype, à partir d'une recherche rapide (articles de blog/SEO indépendants convergents, forums propriétaires, et fiches officielles rappel.conso.gouv.fr pour la partie rappels). Couvre les générations NCV3 (906, 2006-2018) et VS30 (907/910, 2018+), qui se recoupent largement avec le parc camping-car d'occasion actuellement en vente. Points marqués 'confidence: anecdotal' rapportés par des propriétaires/professionnels ou des articles indépendants sans source officielle vérifiée. Points marqués 'confidence: documented' s'appuient sur des sources publiques identifiables (fiche de rappel officielle, article de presse spécialisée nommant sa source).",
+    "last_reviewed": "2026-07-25"
+  },
+  "engines": [
+    {
+      "name": "OM651 2.1L 4-cyl (2008-2013, diesel)",
+      "fuel": "Diesel",
+      "year_range": [2008, 2013],
+      "known_issues": [
+        {
+          "description": "Injecteurs piézoélectriques (Delphi) qui tombent en panne entre 80 000 et 150 000 km : broutement moteur, refus de démarrage, ou passage en mode dégradé. Remplacement coûteux, de l'ordre de 1500 à 2500 €.",
+          "confidence": "anecdotal"
+        },
+        {
+          "description": "Support de filtre à gasoil en plastique qui se déforme et fuit entre 60 000 et 120 000 km, avec un risque de surchauffe moteur si non détecté.",
+          "confidence": "anecdotal"
+        },
+        {
+          "description": "Chaîne de distribution qui s'allonge au-delà de 150 000 km (tendeur défectueux) : bruit de cliquetis/cognement au démarrage. Point de vigilance n°1 à l'achat sur ce millésime : écouter le moteur à froid.",
+          "confidence": "documented"
+        }
+      ]
+    },
+    {
+      "name": "OM651 2.1L 4-cyl Euro 6 (2014-2018, diesel)",
+      "fuel": "Diesel",
+      "year_range": [2014, 2018],
+      "known_issues": [
+        {
+          "description": "Injecteurs redessinés et chaîne de distribution renforcée par rapport à la génération 2008-2013 : moins de retours négatifs identifiés dans la recherche rapide effectuée pour ce prototype — à ne pas interpréter comme fiabilité garantie, juste absence de signal fort trouvé.",
+          "confidence": "anecdotal"
+        }
+      ]
+    },
+    {
+      "name": "OM642 V6 3.0L (2006-2018, diesel)",
+      "fuel": "Diesel",
+      "year_range": [2006, 2018],
+      "known_issues": [
+        {
+          "description": "Joints de culasse qui lâchent typiquement entre 120 000 et 150 000 km, provoquant un mélange huile/liquide de refroidissement — nécessite une dépose complète du moteur, réparation estimée entre 4000 et 6000 €. Bloc signalé comme nettement plus problématique que le 4-cylindres OM651 sur cette période.",
+          "confidence": "anecdotal"
+        },
+        {
+          "description": "Mécanique plus complexe (V6) que les blocs 4-cylindres du reste de la gamme : coût des pièces et de la main d'œuvre plus élevé en cas de panne.",
+          "confidence": "anecdotal"
+        }
+      ]
+    },
+    {
+      "name": "OM654 2.0L 4-cyl Euro 6d (2019+, diesel, génération VS30)",
+      "fuel": "Diesel",
+      "year_range": [2019, 2099],
+      "known_issues": [
+        {
+          "description": "Usure prématurée des culbuteurs (rocker arms) signalée sur ce bloc : bruits parasites dans la partie haute du moteur, perte de puissance, désynchronisation. Pas de campagne de rappel officielle identifiée pour ce point à ce jour.",
+          "confidence": "anecdotal"
+        },
+        {
+          "description": "Systèmes antipollution complexes (EGR, SCR/AdBlue, FAP) pouvant tomber en panne, comme sur la plupart des diesels Euro 6d récents.",
+          "confidence": "anecdotal"
+        },
+        {
+          "description": "Génération plus récente, donc recul plus limité sur fort kilométrage au moment de cette recherche.",
+          "confidence": "anecdotal"
+        }
+      ]
+    }
+  ],
+  "recall": {
+    "summary": "Le Sprinter a fait l'objet de plusieurs campagnes de rappel documentées ces dernières années, plus que ce qui a été trouvé pour les autres châssis couverts par ce prototype : blocage de stationnement pouvant s'user et laisser le véhicule se déplacer (fiche rappel.conso.gouv.fr n°4493, publiée fin 2022, plusieurs configurations 906), corrosion du sous-cadre de l'essieu avant pouvant affecter la direction, corrosion d'une plaque de protection de la batterie de servitude (véhicules fabriqués juin-juillet 2020), et renforts de châssis arrière potentiellement manquants sur certains 2019-2021. Cela ne veut pas dire que ce châssis est moins fiable en sécurité que les autres : cela peut aussi refléter une recherche plus fournie sur cette marque. Aucune campagne massive et systématique du type Takata n'est établie de façon certaine pour ce prototype.",
+    "confidence": "documented",
+    "important": "Le statut de rappel dépend du numéro de série (VIN) exact du véhicule. Ce prototype ne peut pas certifier qu'une annonce précise est concernée : il doit systématiquement renvoyer l'acheteur vers la vérification officielle avant tout achat.",
+    "official_check_url": "https://www.rappel.conso.gouv.fr/"
+  },
+  "common_defects": [
+    {
+      "description": "Système AdBlue complexe (capteur NOx, pompe, réchauffage) sujet à pannes récurrentes ; remplacement complet du réservoir AdBlue estimé entre 1000 et 1500 € dans les cas les plus lourds.",
+      "confidence": "anecdotal"
+    },
+    {
+      "description": "Suspension arrière fortement sollicitée par le poids de la cellule : l'existence d'un marché d'amortisseurs/ressorts renforcés spécifiquement conçus pour les camping-cars sur base Sprinter est un signal indirect que la suspension d'origine est sous-dimensionnée pour cet usage.",
+      "confidence": "anecdotal"
+    },
+    {
+      "description": "Mauvais contact du capteur ABS (maintenu par un ressort métallique) signalé comme un point faible connu chez Mercedes, à graisser/changer à chaque intervention proche.",
+      "confidence": "anecdotal"
+    }
+  ],
+  "maintenance": {
+    "distribution": "Chaîne de distribution sur la quasi-totalité des blocs Sprinter (OM651/OM642/OM654) : pas de remplacement périodique prévu par le constructeur en usage normal, mais tendeur et chaîne à surveiller sur fort kilométrage, en particulier sur l'OM651 2008-2013 où l'allongement de chaîne au-delà de 150 000 km est spécifiquement documenté.",
+    "revision_cost_eur_indicative": {
+      "vidange_simple": [150, 280],
+      "revision_complete": [400, 800],
+      "distribution": [800, 2500]
+    },
+    "note": "Fourchettes indicatives pour situer un ordre de grandeur, pas un devis. Pièces et main d'œuvre Mercedes tendent à coûter plus cher que sur les bases Fiat/Ford/Renault de ce comparatif. La fourchette distribution couvre du simple remplacement de tendeur au changement complet de chaîne ; le cas catastrophique de joint de culasse sur l'OM642 (4000-6000 €) est traité séparément dans les défauts fréquents ci-dessus, pas inclus dans cette fourchette."
+    }
+}

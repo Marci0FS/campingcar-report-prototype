@@ -34,10 +34,11 @@ API) est en stdlib Python.
 ## Ce qui est couvert
 
 - **Châssis :** Fiat Ducato / Citroën Jumper / Peugeot Boxer (même plateforme Sevel),
-  Ford Transit, Renault Master / Opel Movano / Nissan NV400 (même plateforme X62/X70).
-  Liste officielle dans `_CHASSIS_PATTERNS` (`parser/ad_text_parser.py`), affichée
-  automatiquement sur la page et en CLI — pas besoin d'éditer ce README pour la
-  synchroniser côté code, seulement pour que la doc reste lisible.
+  Ford Transit, Renault Master / Opel Movano / Nissan NV400 (même plateforme X62/X70),
+  Mercedes-Benz Sprinter. Liste officielle dans `_CHASSIS_PATTERNS`
+  (`parser/ad_text_parser.py`), affichée automatiquement sur la page et en CLI — pas
+  besoin d'éditer ce README pour la synchroniser côté code, seulement pour que la doc
+  reste lisible.
 - **Cellules (réputation étanchéité) :** CI, Rapido, Hymer, Carthago, Frankia, Knaus,
   Dethleffs, Bürstner, Pilote, Chausson, Challenger, Adria, Laika, Benimar, Etrusco.
 - Châssis hors liste : aucun rapport généré (pas de contenu inventé pour un véhicule hors
@@ -45,10 +46,10 @@ API) est en stdlib Python.
   réputation étanchéité).
 - **Châssis identifiés mais volontairement hors périmètre pour l'instant** (reconnus dans
   le texte pour un message "hors périmètre" plus utile, mais sans base de connaissance
-  réelle) : Mercedes-Benz Sprinter, Iveco Daily, Volkswagen Crafter. Un élargissement à
-  ces marques (plus Volkswagen Transporter T5/T6/T6.1) est planifié mais demande une
-  vraie recherche automobile par marque (pannes connues, coûts d'entretien, texte de
-  rappel) avant d'être ajouté — pas de données inventées.
+  réelle) : Iveco Daily, Volkswagen Crafter, Volkswagen Transporter T5/T6/T6.1. Un
+  élargissement à ces marques est planifié mais demande une vraie recherche automobile
+  par marque (pannes connues, coûts d'entretien, texte de rappel) avant d'être ajouté —
+  pas de données inventées.
 
 ## Fonctionnalités
 
@@ -91,6 +92,15 @@ injoignable, le rapport le signale et continue sans planter.
 quel sur un serveur accessible depuis internet** : le débogueur Werkzeug permet
 l'exécution de code arbitraire. Pour un déploiement public, désactiver `debug` et servir
 via un serveur WSGI de production (gunicorn, waitress...).
+
+**Déployé en ligne sur Vercel** : https://campingcar-report-prototype.vercel.app —
+Vercel importe directement l'objet `app` de `app.py` via son runtime Python (`app.run()`
+n'est jamais appelé, donc `debug=True` ne s'exécute pas en production). Config dans
+`vercel.json` (timeout de fonction à 30s, pour laisser de la marge aux appels RappelConso/
+recherche entreprise). Les fichiers statiques vivent dans `public/static/` (pas
+`static/` à la racine) : Vercel les sert directement via son CDN, comme documenté sur
+[vercel.com/docs/frameworks/backend/flask](https://vercel.com/docs/frameworks/backend/flask).
+Un push sur `main`/`master` redéploie automatiquement (repo GitHub connecté).
 
 ## Licence
 

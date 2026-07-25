@@ -14,7 +14,10 @@ from report.report_generator import (
     supported_chassis_sentence,
 )
 
-app = Flask(__name__)
+# Le dossier statique vit dans public/static/ (pas static/ à la racine) pour
+# que Vercel le serve directement via son CDN (public/**) sans repasser par
+# Flask — même URL /static/... en local (via Flask) et en prod (via Vercel).
+app = Flask(__name__, static_folder="public/static", static_url_path="/static")
 
 
 @app.route("/", methods=["GET", "POST"])
