@@ -188,6 +188,11 @@ _CHASSIS_PATTERNS = [
     ),
     ("Ford Transit", re.compile(r"\bford\s*transit\b", re.IGNORECASE)),
     ("Renault Master", re.compile(r"\brenault\s*master\b", re.IGNORECASE)),
+    # Movano/NV400 : même plateforme que le Renault Master (X62/X70), vendue
+    # sous badge Opel/Vauxhall/Nissan. Noms de modèle propres et sans
+    # ambiguïté (contrairement à "master" seul) : match nu suffisant.
+    ("Opel Movano", re.compile(r"\bmovano\b", re.IGNORECASE)),
+    ("Nissan NV400", re.compile(r"\bnv[\s-]?400\b", re.IGNORECASE)),
 ]
 _OTHER_CHASSIS_KEYWORDS = ["iveco daily", "mercedes sprinter", "volkswagen crafter"]
 
@@ -251,7 +256,10 @@ _SIRET_CAPTURE_RE = re.compile(r"\bsiret\s*:?\s*((?:\d[\s]?){14})", re.IGNORECAS
 
 # Châssis/cellules réellement couverts par une base de connaissance —
 # doit rester synchronisé avec les clés utilisées dans report_generator.py.
-_SUPPORTED_CHASSIS = {"Fiat Ducato", "Citroën Jumper", "Peugeot Boxer", "Ford Transit", "Renault Master"}
+_SUPPORTED_CHASSIS = {
+    "Fiat Ducato", "Citroën Jumper", "Peugeot Boxer", "Ford Transit",
+    "Renault Master", "Opel Movano", "Nissan NV400",
+}
 _SUPPORTED_CELLULES = set(_CELLULE_RE.keys())
 
 

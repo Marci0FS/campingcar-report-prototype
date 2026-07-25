@@ -1,7 +1,7 @@
 {
   "chassis": "Renault Master",
   "_meta": {
-    "note": "Base curée à la main pour un prototype, à partir d'une recherche rapide (articles de blog/SEO indépendants convergents). Points marqués 'confidence: anecdotal' rapportés par des propriétaires/professionnels sans source officielle vérifiée.",
+    "note": "Base curée à la main pour un prototype, à partir d'une recherche rapide (articles de blog/SEO indépendants convergents). Le Master partage sa plateforme (X62/X70) avec l'Opel/Vauxhall Movano et le Nissan NV400 (badge-engineering) : les points mécaniques ci-dessous s'appliquent en général aux trois. Points marqués 'confidence: anecdotal' rapportés par des propriétaires/professionnels sans source officielle vérifiée.",
     "last_reviewed": "2026-07-24"
   },
   "engines": [
@@ -37,7 +37,7 @@
     }
   ],
   "recall": {
-    "summary": "Le Master, comme tout véhicule, peut faire l'objet de campagnes de rappel constructeur ponctuelles selon le millésime et le numéro de série. Aucune campagne majeure et systématique du type Takata n'est établie de façon certaine pour ce prototype.",
+    "summary": "Ce châssis, comme tout véhicule, peut faire l'objet de campagnes de rappel constructeur ponctuelles selon le millésime et le numéro de série (fiche partagée par le Renault Master, l'Opel Movano et le Nissan NV400, même plateforme). Aucune campagne majeure et systématique du type Takata n'est établie de façon certaine pour ce prototype.",
     "confidence": "documented",
     "important": "Le statut de rappel dépend du numéro de série (VIN) exact du véhicule. Ce prototype ne peut pas certifier qu'une annonce précise est concernée : il doit systématiquement renvoyer l'acheteur vers la vérification officielle avant tout achat.",
     "official_check_url": "https://www.rappel.conso.gouv.fr/"

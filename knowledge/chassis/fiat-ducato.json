@@ -25,7 +25,7 @@
     }
   ],
   "recall": {
-    "summary": "Le Ducato, comme tout véhicule, peut faire l'objet de campagnes de rappel constructeur ponctuelles selon le millésime et le numéro de série. Aucune campagne majeure et systématique du type Takata n'est établie de façon certaine pour ce prototype.",
+    "summary": "Ce châssis, comme tout véhicule, peut faire l'objet de campagnes de rappel constructeur ponctuelles selon le millésime et le numéro de série (fiche partagée par le Fiat Ducato, le Citroën Jumper et le Peugeot Boxer, même plateforme). Aucune campagne majeure et systématique du type Takata n'est établie de façon certaine pour ce prototype.",
     "confidence": "documented",
     "important": "Le statut de rappel dépend du numéro de série (VIN) exact du véhicule. Ce prototype ne peut pas certifier qu'une annonce précise est concernée : il doit systématiquement renvoyer l'acheteur vers la vérification officielle avant tout achat.",
     "official_check_url": "https://www.rappel.conso.gouv.fr/"

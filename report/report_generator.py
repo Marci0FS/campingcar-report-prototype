@@ -24,6 +24,8 @@ _RAPPELCONSO_QUERY = {
     "Peugeot Boxer": ("peugeot", "boxer"),
     "Ford Transit": ("ford", "transit"),
     "Renault Master": ("renault", "master"),
+    "Opel Movano": ("opel", "movano"),
+    "Nissan NV400": ("nissan", "nv400"),
 }
 
 
@@ -182,10 +184,37 @@ _CELLULE_KEY_MAP = {
 }
 # Fiat Ducato / Citroën Jumper / Peugeot Boxer partagent la même plateforme
 # (Sevel) : même base de connaissance, nom affiché = celui détecté dans l'annonce.
+# Opel Movano / Nissan NV400 : même plateforme (X62/X70) que Renault Master.
 _CHASSIS_KEY_MAP = {
     "Fiat Ducato": "fiat-ducato", "Citroën Jumper": "fiat-ducato", "Peugeot Boxer": "fiat-ducato",
-    "Ford Transit": "ford-transit", "Renault Master": "renault-master",
+    "Ford Transit": "ford-transit",
+    "Renault Master": "renault-master", "Opel Movano": "renault-master", "Nissan NV400": "renault-master",
 }
+
+# Groupes de marques de châssis pour l'affichage — une plateforme mécanique
+# partagée (ex. Sevel, ou Renault Master/Opel Movano/Nissan NV400) forme un
+# seul groupe. Source de vérité unique pour la phrase "châssis couverts"
+# affichée en CLI, sur la page web (encart périmètre) et dans le message
+# "hors périmètre" — évite d'avoir à éditer 3 endroits à chaque nouvelle marque.
+_CHASSIS_DISPLAY_GROUPS: list[tuple[str, ...]] = [
+    ("Fiat Ducato", "Citroën Jumper", "Peugeot Boxer"),
+    ("Ford Transit",),
+    ("Renault Master", "Opel Movano", "Nissan NV400"),
+]
+
+
+def supported_chassis_groups() -> list[str]:
+    """Une chaîne par groupe de plateforme partagée, ex. 'Fiat Ducato / Citroën
+    Jumper / Peugeot Boxer' — pour un affichage avec emphase par groupe."""
+    return [" / ".join(group) for group in _CHASSIS_DISPLAY_GROUPS]
+
+
+def supported_chassis_sentence() -> str:
+    """Phrase française 'A, B ou C' pour le texte CLI et le message hors périmètre."""
+    groups = supported_chassis_groups()
+    if len(groups) == 1:
+        return groups[0]
+    return ", ".join(groups[:-1]) + " ou " + groups[-1]
 
 
 @dataclass
@@ -254,9 +283,8 @@ def build_report(ad: ParsedAd) -> str:
             f"Cellule détectée : {ad.detected_cellule or 'non identifiée'}."
         )
         lines.append(
-            "Ce prototype ne couvre que Fiat Ducato/Citroën Jumper/Peugeot Boxer, "
-            "Ford Transit ou Renault Master comme châssis. Aucun rapport n'est généré, "
-            "faute de base mécanique à laquelle rattacher un avis."
+            f"Ce prototype ne couvre que {supported_chassis_sentence()} comme châssis. "
+            "Aucun rapport n'est généré, faute de base mécanique à laquelle rattacher un avis."
         )
         return "\n".join(lines)
 

@@ -28,7 +28,7 @@
 
   <div class="scope-note">
     <span class="kicker">Périmètre</span>
-    <span>Châssis couverts : <strong>Fiat Ducato / Citroën Jumper / Peugeot Boxer</strong>, <strong>Ford Transit</strong>, <strong>Renault Master</strong>. Réputation étanchéité disponible pour 15 marques de cellule (CI, Rapido, Hymer, Carthago, Frankia, Knaus, Dethleffs, Bürstner, Pilote, Chausson, Challenger, Adria, Laika, Benimar, Etrusco) — les autres marques reçoivent un dossier partiel (mécanique châssis, sans réputation cellule).</span>
+    <span>Châssis couverts : {% for g in chassis_groups %}<strong>{{ g }}</strong>{% if not loop.last %}, {% endif %}{% endfor %}. Réputation étanchéité disponible pour 15 marques de cellule (CI, Rapido, Hymer, Carthago, Frankia, Knaus, Dethleffs, Bürstner, Pilote, Chausson, Challenger, Adria, Laika, Benimar, Etrusco) — les autres marques reçoivent un dossier partiel (mécanique châssis, sans réputation cellule).</span>
   </div>
 
   <form method="post">
@@ -43,7 +43,7 @@
         <span class="stamp defavorable">Hors périmètre</span>
         <p>Châssis détecté : <strong>{{ report.detected_chassis or "non identifié" }}</strong></p>
         <p>Cellule détectée : <strong>{{ report.detected_cellule or "non identifiée" }}</strong></p>
-        <p>Ce dossier ne couvre que Fiat Ducato/Citroën Jumper/Peugeot Boxer, Ford Transit ou Renault Master comme châssis. Aucun rapport n'est généré, faute de base mécanique à laquelle rattacher un avis.</p>
+        <p>Ce dossier ne couvre que {{ chassis_sentence }} comme châssis. Aucun rapport n'est généré, faute de base mécanique à laquelle rattacher un avis.</p>
       </div>
     {% else %}
 

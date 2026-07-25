@@ -8,7 +8,11 @@ from __future__ import annotations
 from flask import Flask, render_template, request
 
 from parser.ad_text_parser import parse_ad_text
-from report.report_generator import build_report_context
+from report.report_generator import (
+    build_report_context,
+    supported_chassis_groups,
+    supported_chassis_sentence,
+)
 
 app = Flask(__name__)
 
@@ -24,7 +28,13 @@ def index():
             ad = parse_ad_text(pasted_text)
             context = build_report_context(ad)
 
-    return render_template("index.html", report=context, pasted_text=pasted_text)
+    return render_template(
+        "index.html",
+        report=context,
+        pasted_text=pasted_text,
+        chassis_groups=supported_chassis_groups(),
+        chassis_sentence=supported_chassis_sentence(),
+    )
 
 
 if __name__ == "__main__":
